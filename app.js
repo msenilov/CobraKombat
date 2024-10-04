@@ -2,10 +2,26 @@
 let tokens = 0;
 
 // Get references to HTML elements
+const AdController = window.Adsgram.init({ blockId: "3888" });
 const cobraClick = document.getElementById('cobra-click');
 const tokenCounter = document.getElementById('token-counter');
 const watchAdButton = document.getElementById('watch-ad-button');
 const messageBox = document.getElementById('message-box');
+
+
+const button = document.getElementById('watch-ad-button');
+
+  button.addEventListener('click', () => {
+    AdController.show().then((result) => {
+      // user watch ad till the end
+      // your code to reward user
+      alert('Reward');
+      }).catch((result) => {
+        // user skipped video or get error during playing ad
+        // do nothing or whatever you want
+        alert(JSON.stringify(result, null, 4));
+        })
+})
 
 // Function to update the token display
 function updateTokens() {

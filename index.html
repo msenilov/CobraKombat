@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cobra Kombat Web App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f9;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .cobra-circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-image: url('cobra-image.png');
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    #token-counter {
+      margin-top: 20px;
+      font-size: 24px;
+    }
+
+    .ads-section {
+      margin-top: 50px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #message-box {
+      margin-top: 30px;
+      padding: 15px;
+      width: 80%;
+      max-width: 400px;
+      border: 2px solid #007BFF;
+      border-radius: 10px;
+      background-color: #eaf2ff;
+      font-size: 18px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Welcome to Cobra Kombat</h1>
+
+    <div class="cobra-circle" id="cobra-click"></div>
+    <p id="token-counter">Tokens: 0</p>
+
+    <div class="ads-section">
+      <h2>Earn More Tokens</h2>
+      <p>Watch ads and earn extra tokens:</p>
+      <button id="watch-ad-button">Watch an Ad (Powered by AdsGram_AI)</button>
+    </div>
+
+    <div id="message-box">Click on the cobra to earn tokens!</div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
